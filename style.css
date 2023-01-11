@@ -123,14 +123,14 @@ body {
         padding: 30px 0 28px;
     }
     .AboutContent {
-        padding: 0 20px;
         display: flex;
         flex-direction: column;
+        padding: 0 20px;
     }
     /* 紹介コンテンツ : 動画 */
     .AboutContent-video {
-        width: 100%;
         margin-bottom: 20px;
+        width: 100%;
     }
     /* 紹介コンテンツ : 説明文 */
     .AboutContent-captions {
@@ -157,8 +157,8 @@ body {
     }
     /* 紹介コンテンツ : ボタン */
     .AboutButtons {
-        display: flex;
         color: #fff;
+        display: flex;
         font-size: 18px;
         text-decoration: none;
     }
