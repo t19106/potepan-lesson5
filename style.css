@@ -6,7 +6,11 @@ body {
     padding: 0;
 }
 
+/* =============================================
+スマホサイズ
+============================================= */
 @media screen and (max-width: 767px) {
+    /* ヘッダー : 全体 */
     .Header {
         padding: 13px 0 15px;
         width: 100%;
@@ -16,19 +20,21 @@ body {
         justify-content: space-between;
         margin: 0 20px;
     }
-    .HeaderNav {
-        cursor: pointer;
-        display: block;
-        height: 21px;
-        position: relative;
-        width: 30px;
-    }
+    /* ヘッダー : ロゴ画像 */
     .HeaderLogo-image-sp {
         height: 16px;
         width: auto;
     }
     .FirstView-image-sp {
         width: 100%;
+    }
+    /* ヘッダー : ナビゲーション */
+    .HeaderNav {
+        cursor: pointer;
+        display: block;
+        height: 21px;
+        position: relative;
+        width: 30px;
     }
     .HeaderNav-line {
         background-color: #333;
@@ -46,10 +52,13 @@ body {
     .HeaderNav-line:last-child {
         top: 100%;
     }
+
+    /* ファーストビューコンテンツ : 全体 */
     .FirstViewContent {
         margin-top: -46vw;
         padding: 0 20px 35px;
     }
+    /* ファーストビューコンテンツ : ヘッダー */
     .FirstViewContent-header {
         color: #333;
         font-size: 24px;
@@ -57,6 +66,7 @@ body {
         margin: 0 auto 15px;
         text-align: center;
     }
+    /* ファーストビューコンテンツ : 画像 */
     .FirstViewContent-images {
         display: flex;
         margin-bottom: 30px;
@@ -72,6 +82,7 @@ body {
     .FirstViewContent-images img:last-child {
         margin: 0;
     }
+    /* ファーストビューコンテンツ : ボタン */
     .FirstViewContent-buttons {
         margin-bottom: 20px;
     }
@@ -93,6 +104,7 @@ body {
     .button-download {
         display: none;
     }
+    /* ファーストビューコンテンツ : 説明文 */
     .FirstViewCaption {
         color: #bbb;
         font-size: 12px;
@@ -104,6 +116,8 @@ body {
         cursor: pointer;
         text-decoration: none;
     }
+
+    /* 紹介コンテンツ : 全体 */
     .About {
         background-color: #f79214;
         padding: 30px 0 28px;
@@ -113,10 +127,12 @@ body {
         display: flex;
         flex-direction: column;
     }
+    /* 紹介コンテンツ : 動画 */
     .AboutContent-video {
         width: 100%;
         margin-bottom: 20px;
     }
+    /* 紹介コンテンツ : 説明文 */
     .AboutContent-captions {
         align-items: flex-start;
         display: flex;
@@ -139,6 +155,7 @@ body {
         line-height: 26px;
         margin-bottom: 16px;
     }
+    /* 紹介コンテンツ : ボタン */
     .AboutButtons {
         display: flex;
         color: #fff;
@@ -149,7 +166,6 @@ body {
         cursor: pointer;
     }
     .AboutButtons img {
-        cursor: pointer;
         margin-right: 5px;
     }
 }
