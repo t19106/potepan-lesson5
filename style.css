@@ -1,3 +1,175 @@
-@media screen and (max-width: 767px)　{
+/* =============================================
+共通パーツ
+============================================= */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* =============================================
+スマホサイズ
+============================================= */
+@media screen and (max-width: 767px) {
+    /* ヘッダー : 全体 */
+    .Header {
+        padding: 13px 0 15px;
+        width: 100%;
+    }
+    .Header-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+    /* ヘッダー : ロゴ画像 */
+    .HeaderLogo-image-sp {
+        height: 16px;
+        width: auto;
+    }
+    .FirstView-image-sp {
+        width: 100%;
+    }
+    /* ヘッダー : ナビゲーション */
+    .HeaderNav {
+        cursor: pointer;
+        display: block;
+        height: 21px;
+        position: relative;
+        width: 30px;
+    }
+    .HeaderNav-line {
+        background-color: #333;
+        border-radius: 10px;
+        display: block;
+        font-weight: 300;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
+    .HeaderNav-line:first-child {
+        top: 0;
+    }
+    .HeaderNav-line:last-child {
+        top: 100%;
+    }
+
+    /* ファーストビューコンテンツ : 全体 */
+    .FirstViewContent {
+        margin-top: -46vw;
+        padding: 0 20px 35px;
+    }
+    /* ファーストビューコンテンツ : ヘッダー */
+    .FirstViewContent-header {
+        color: #333;
+        font-size: 24px;
+        line-height: 36px;
+        margin: 0 auto 15px;
+        text-align: center;
+    }
+    /* ファーストビューコンテンツ : 画像 */
+    .FirstViewContent-images {
+        display: flex;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    .FirstViewContent-images img {
+        margin-right: 8px;
+        width: 27.5%;
+    }
+    .FirstViewContent-images img:nth-child(2) {
+        width: 40%;
+    }
+    .FirstViewContent-images img:last-child {
+        margin: 0;
+    }
+    /* ファーストビューコンテンツ : ボタン */
+    .FirstViewContent-buttons {
+        margin-bottom: 20px;
+    }
+    .button-contact {
+        align-items: center;
+        background-color: #f79214;
+        border: none;
+        border-radius: 38px;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 64px;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+    }
+    .button-download {
+        display: none;
+    }
+    /* ファーストビューコンテンツ : 説明文 */
+    .FirstViewCaption {
+        color: #bbb;
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 0;
+    }
+    .FirstViewCaption a {
+        color: #bbb;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    /* 紹介コンテンツ : 全体 */
+    .About {
+        background-color: #f79214;
+        padding: 30px 0 28px;
+    }
+    .AboutContent {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    /* 紹介コンテンツ : 動画 */
+    .AboutContent-video {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    /* 紹介コンテンツ : 説明文 */
+    .AboutContent-captions {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .AboutContent-captions h2 {
+        color: #fff;
+        font-size: 33px;
+        line-height: 1.4;
+        margin: 0;
+        white-space: pre;
+        word-break: keep-all;
+    }
+    .AboutContent-captions p {
+        color: #fff;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 16px;
+    }
+    /* 紹介コンテンツ : ボタン */
+    .AboutButtons {
+        color: #fff;
+        display: flex;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .AboutButtons a {
+        cursor: pointer;
+    }
+    .AboutButtons img {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1080px) {
 
 }
