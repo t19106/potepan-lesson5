@@ -102,12 +102,9 @@ ul, li {
     padding: 100px 0 28px;
 }
 .FirstViewContainer {
+    margin: 0 auto;
     max-width: 1140px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+    padding: 0 50px;
 }
 .FirstViewContent {
     margin-bottom: 70px;
@@ -194,11 +191,9 @@ ul, li {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     max-width: 1140px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px;
     width: fit-content;
 }
 /* 紹介コンテンツ : 動画 */
