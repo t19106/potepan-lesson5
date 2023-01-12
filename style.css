@@ -1,6 +1,18 @@
+/*---------------------------
+  
+  0. 共通パーツ
+  1. スマホ／タブレット版共通パーツ
+  2. タブレット／PC版共通パーツ
+  3. 紹介コンテンツレイアウト（1025pxまでの対応）
+  4. スマホ版デザイン調整
+  5. タブレット版デザイン調整
+  6. PC版デザイン調整
+
+---------------------------*/
 /* =============================================
-共通パーツ
+0. 共通パーツ
 ============================================= */
+/********** タグ要素 **********/
 body {
     font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
     font-size: 14px;
@@ -16,11 +28,18 @@ ul, li {
     margin: 0;
     padding: 0;
 }
+*, *:before, *:after {
+    word-break: break-all;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/********** ヘッダー **********/
 /* ヘッダー : 全体 */
 .Header {
-    width: 100%;
     padding: 20px 0;
     position: absolute;
+    width: 100%;
 }
 .Header-container {
     display: flex;
@@ -37,7 +56,7 @@ ul, li {
     height: 20px;
     width: auto;
 }
-
+/* ヘッダー : ナビゲーション */
 .HeaderNavList {
     align-items: center;
     display: flex;
@@ -61,35 +80,34 @@ ul, li {
     font-size: 10px;
 }
 .button-contact-small {
-    align-items: center;
     background-color: #f79214;
     border: none;
     border-radius: 38px;
     color: #fff;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    font-weight: 700;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
+    display: block;
     font-size: 12px;
-    height: 40px;
+    font-weight: 700;
+    line-height: 40px;
     padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
 }
+/********** ファーストビューコンテンツ **********/
 /* ファーストビューコンテンツ : 全体 */
 .FirstView {
     background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
-    background-size: cover;
     background-position: center;
-    padding-top: 100px;
-    padding-bottom: 28px;
+    background-size: cover;
+    padding: 100px 0 28px;
 }
 .FirstViewContainer {
     max-width: 1140px;
     padding-left: 50px;
     padding-right: 50px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 .FirstViewContent {
     margin-bottom: 70px;
@@ -107,13 +125,13 @@ ul, li {
 }
 /* ファーストビューコンテンツ : 画像 */
 .FirstViewContent-images {
+    display: block;
     margin-bottom: 25px;
     width: 100%;
 }
 .FirstViewContent-images img {
     margin-right: 8px;
     vertical-align: middle;
-    /* width: 27.5%; */
 }
 .FirstViewContent-images img:nth-child(2) {
     width: 40%;
@@ -124,7 +142,6 @@ ul, li {
     margin: 0;
 }
 .button-contact {
-    align-items: center;
     background-color: #f79214;
     border: none;
     border-radius: 38px;
@@ -135,8 +152,8 @@ ul, li {
     font-weight: 700;
     line-height: 64px;
     margin-right: 15px;
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
     width: 306px;
 }
 .button-download {
@@ -150,8 +167,8 @@ ul, li {
     font-size: 16px;
     font-weight: 700;
     line-height: 64px;
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
     width: 176px;
 }
 /* ファーストビューコンテンツ : 説明文 */
@@ -166,7 +183,7 @@ ul, li {
     cursor: pointer;
     text-decoration: none;
 }
-
+/********** 紹介コンテンツ **********/
 /* 紹介コンテンツ : 全体 */
 .About {
     background-color: #f79214;
@@ -174,15 +191,14 @@ ul, li {
 }
 /* 紹介コンテンツ : 全体 */
 .AboutContent {
-    max-width: 1140px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
     width: fit-content;
 }
 /* 紹介コンテンツ : 動画 */
@@ -238,9 +254,10 @@ ul, li {
 }
 
 /* =============================================
-スマホ／タブレット共通
+1. スマホ／タブレット版共通パーツ
 ============================================= */
 @media screen and (max-width: 1080px) {
+    /********** ヘッダー **********/
     /* ヘッダー : 全体 */
     .Header {
         background-color: #fff;
@@ -251,6 +268,7 @@ ul, li {
         display: none;
     }
     /* ヘッダー : ナビゲーション（ハンバーガーアイコン） */
+    /* スマホ版、タブレット版にはハンバーガーアイコンが実装されている */
     .HeaderNavIcon {
         cursor: pointer;
         display: block;
@@ -277,27 +295,50 @@ ul, li {
 }
 
 /* =============================================
-タブレット／PC共通
+2. タブレット／PC版共通パーツ
 ============================================= */
 @media screen and (min-width: 768px) {
-    .HeaderNavList li {
-        transition: opacity .2s;
-    }
+    /********** ヘッダー **********/
     /* ヘッダー : ロゴ画像 */
     .HeaderLogo-image-sp {
         display: none;
     }
-
+    /********** ファーストビューコンテンツ **********/
     /* ファーストビューコンテンツ : メイン画像 */
     .FirstView-image-sp {
         display: none;
     }
+    /********** ホバー時のアニメーション指定 **********/
+    /* 768px以上の画面の広さでは、カーソルを乗せた際に透明度操作によるホバーアニメーションが実装されている
+       ただしカーソルアイコンの変更については、各自要素のスタイル内で指定されている */
+    /* ロゴ */
+    .HeaderLogo:hover {
+        opacity: .8;
+    }
+    .HeaderLogo {
+        transition: opacity .2s;
+    }
+    /* ヘッダーナビゲーションの項目 */
+    .HeaderNavList li:hover {
+        opacity: .8;
+    }
+    .HeaderNavList li {
+        transition: opacity .2s;
+    }
+    /* ファーストビューコンテンツ内のボタン */
+    .FirstViewContent-buttons a:hover {
+        opacity: .8;
+    }
+    .FirstViewContent-buttons a {
+        transition: opacity .2s;
+    }
 }
 
 /* =============================================
-紹介コンテンツ - 1025pxまでの対応
+3. 紹介コンテンツレイアウト（1025pxまでの対応）
 ============================================= */
-/* 1025pxまでは動画と説明文がcolumn形式で並ぶ */
+/* 1025pxまでは、動画と説明文がcolumn形式で並ぶ
+   1025px以降は、動画と説明文が横並びになる */
 @media screen and (max-width: 1024px) {
     .AboutContent {
         flex-direction: column;
@@ -313,16 +354,17 @@ ul, li {
 }
 
 /* =============================================
-スマホサイズ
+4. スマホ版デザイン調整
 ============================================= */
 @media screen and (max-width: 767px) {
-    /* 全体 */
+    /********** 全体 **********/
     .Main {
         padding-top: 52px;
     }
+    /********** ヘッダー **********/
     /* ヘッダー : 全体 */
     .Header {
-        padding: 13px 0 15px;
+        padding: 15px 0;
     }
     .Header-container {
         margin: 0 20px;
@@ -331,12 +373,11 @@ ul, li {
     .HeaderLogo-image {
         display: none;
     }
-
+    /********** ファーストビューコンテンツ **********/
     /* ファーストビューコンテンツ : 全体 */
     .FirstView {
         background-image: none;
-        padding-top: 0;
-        padding-bottom: 35px;
+        padding: 0 0 35px;
     }
     .FirstViewContainer {
         margin-top: -46vw;
@@ -352,6 +393,12 @@ ul, li {
     }
     .FirstView-image {
         display: none;
+    }
+    .FirstViewContent-images {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        width: 100%;
     }
     /* ファーストビューコンテンツ : ヘッダー */
     .FirstViewContent-header {
@@ -372,7 +419,10 @@ ul, li {
     .button-download {
         display: none;
     }
-
+    .button-contact {
+        margin-right: 0px;
+    }
+    /********** 紹介コンテンツ **********/
     /* 紹介コンテンツ : 全体 */
     .About {
         padding: 30px 0 28px;
@@ -397,13 +447,14 @@ ul, li {
 }
 
 /* =============================================
-タブレットサイズ
+5. タブレット版デザイン調整
 ============================================= */
 @media screen and (min-width: 768px) and (max-width: 1080px) {
-    /* 全体 */
+    /********** 全体 **********/
     .Main {
         padding-top: 60px;
     }
+    /********** ヘッダー **********/
     /* ヘッダー : 全体 */
     .Header {
         padding: 20px 0;
@@ -417,7 +468,7 @@ ul, li {
         height: 20px;
         width: auto;
     }
-
+    /********** ファーストビューコンテンツ **********/
    /* ファーストビューコンテンツ : ヘッダー */
    .FirstViewContent-header {
         font-size: 38px;
@@ -442,24 +493,14 @@ ul, li {
         width: 75%;
     }
 }
+
 /* =============================================
-PCサイズ
+6. PC版デザイン調整
 ============================================= */
 @media screen and (min-width: 1081px) {
+    /********** ヘッダー **********/
+    /* ヘッダー : ナビゲーション（ハンバーガーアイコン） */
     .HeaderNavIcon {
         display: none;
     }
-}
-
-.button-contact {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transition: all 0.2s ease-in;
--moz-transition: all 0.2s ease-in;
--o-transition: all 0.2s ease-in;
-transition: all 0.2s ease-in;
-}
-
-a {
-
 }
